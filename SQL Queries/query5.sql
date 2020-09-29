@@ -1,0 +1,2 @@
+Select p.patient_id, p.name, p.patient_type, a.appointment_case, a.appointment_date, t.treatments, pa.totalamount_payment, pa.doctorcharge_payment from patient p, appointment a, treatment t, payment pa, appointment_detail ad, treatment_detail td where p.staff_type='Uncertified' and p.patient_id=ad.patient_id and p.patient_id=td.patient_id and a.appointment_id=ad.appointment_id and t.treatment_id=td.treatment_id and pa.payment_id=td.payment_id
+/

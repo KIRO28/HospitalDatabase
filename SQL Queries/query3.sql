@@ -1,0 +1,2 @@
+Select d.doctor_id, d.doctor_name, a.appointment_id, a.appointment_case, t.treatments, p.doctorcharge_payment from doctors d, appointment a, treatment t, payment p, appointment_detail ad, treatment_detail td where d.doctor_type='Certified' and d.doctor_id=ad.doctor_id and a.appointment_id=ad.appointment_id and a.appointment_id = td.appointment_id and t.treatment_id=td.treatment_id and p.payment_id=td.payment_id
+/
